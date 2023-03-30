@@ -1,0 +1,17 @@
+func Caracteres_next (it :Iterator) {
+    if it.i < #it.v {
+        val c = it.v[it.i]
+        set it.i = it.i + 1
+        c
+    } else {
+        nil
+    }
+}
+
+func Caracteres (str) {
+    [Caracteres_next, str, 0]
+}
+
+loop in Caracteres("ola mundo"), c {
+    println(c)
+}
