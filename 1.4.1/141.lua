@@ -1,13 +1,12 @@
 function Arquivo(nome_arquivo)
   local arquivo = io.open(nome_arquivo, "r") 
-  local conteudo = arquivo:read("*all") -- p ler todo o conteudo do arquivo
+  local conteudo = arquivo:read("*all") 
   arquivo:close()
 
-  -- vai armazenar as palavras lidas no txt
   local palavras = {} 
 
-  for palavra in conteudo:gmatch("%S+") do -- funcao gmatch para encontrar todas as ocorrencias de espaços q n sejam em branco
-    table.insert(palavras, palavra) -- Adicionar a palavra à tabela
+  for palavra in conteudo:gmatch("%S+") do 
+    table.insert(palavras, palavra) 
   end
 
   local indice = 1 
