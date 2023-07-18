@@ -1,5 +1,5 @@
 function F()
-    f = io.open("teste.txt", "r") 
+    f = io.open("arquivo.txt", "r") 
     letra = f:read(1)
     while letra do
         coroutine.yield(letra)
